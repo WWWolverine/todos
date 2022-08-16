@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 
 interface PaginationProps {
   commentPerPage: any;
@@ -12,21 +12,32 @@ const Pagination: FC<PaginationProps> = ({
   paginate,
 }) => {
   const pageNumbers = [];
+
   for (let i = 1; i <= Math.ceil(totalComment / commentPerPage); i++) {
     pageNumbers.push(i);
   }
+  const [details, setDetails] = useState(false);
+  const aBgClassName = details ? "aclass1" : "aclass2";
+  const aClasses = ["h4", aBgClassName];
+
+  const addClick = (number: any) => {
+    setDetails((prev) => !prev);
+    paginate(number);
+  };
 
   return (
-    <div>
-      <ul className="pagination">
-        {pageNumbers.map((number) => (
-          <li className="page-item" key={number}>
-            <a href="" onClick={() => paginate(number)}>
-              <h4>{number}</h4>
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="nav">
+      {pageNumbers.map((number) => (
+        <h4 key={number}>
+          <a
+            className={aClasses.join(" ")}
+            href="##"
+            onClick={() => addClick(number)}
+          >
+            {number}
+          </a>
+        </h4>
+      ))}
     </div>
   );
 };

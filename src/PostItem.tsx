@@ -22,7 +22,7 @@ const PostItem: FC<PostItemProps> = ({ comment, post, index, id, timing }) => {
           props={""}
           title={0}
           body={""}
-          timing={Time[1]}
+          timing={Time[0]}
           index={""}
         />
       ))}

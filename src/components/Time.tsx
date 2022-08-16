@@ -6,8 +6,4 @@ export const Time: Itime[] = [
 
     timezone: "America/Punta_Arenas",
   },
-  {
-    datetime: "2022-08-09T00:51:55.723432+06:00",
-    timezone: "Asia/Almaty",
-  },
 ];

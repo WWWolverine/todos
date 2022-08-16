@@ -13,7 +13,7 @@ interface PostListProps {
   index: string | number;
 }
 
-const PostList: FC<PostListProps> = ({ number, post, body, title, timing }) => {
+const PostList: FC<PostListProps> = ({ number, post, timing }) => {
   return (
     <div className="post">
       <div className="post__content">
