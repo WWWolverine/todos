@@ -71,17 +71,19 @@ const App = () => {
         <div className="App-center">
           <div className="App">
             {" "}
-            <button className="prev" onClick={prevPage}>
-              Предыдущая страница{" "}
-            </button>{" "}
-            <button className="next" onClick={nextPage}>
-              Следующая страница{" "}
-            </button>
-            <Pagination
-              commentPerPage={commentPerPage}
-              totalComment={comment.length}
-              paginate={paginate}
-            />
+            <div className="btnpn">
+              <button className="prev" onClick={prevPage}>
+                Предыдущая страница{" "}
+              </button>{" "}
+              <button className="next" onClick={nextPage}>
+                Следующая страница{" "}
+              </button>
+              <Pagination
+                commentPerPage={commentPerPage}
+                totalComment={comment.length}
+                paginate={paginate}
+              />
+            </div>
             <div className="Comments">
               <form
                 className=".add-items-form"
